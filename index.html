@@ -143,6 +143,7 @@ img{max-width:100%}
       <a class="plain" href="#get-involved">Get Involved</a>
       <a class="plain" data-link="events" href="calendar.html">Events</a>
       <a class="plain" href="#contact">Contact</a>
+      <a href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Voter Guide</a>
       <a class="btn" data-link="member" href="https://caworkingfamilies.org/">Join the Party</a>
     </nav>
   </div>
@@ -158,7 +159,8 @@ img{max-width:100%}
       <div class="cta">
         <a class="btn black" href="#get-involved">Get Involved</a>
         <a class="btn line" data-link="events" href="calendar.html">See Events</a>
-        <a class="btn line" data-link="instagram" href="https://caworkingfamilies.org/">Follow on Instagram</a>
+        <a class="btn line" href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Voter Guide</a>
+        <a class="btn line" data-link="instagram" href="https://www.instagram.com/wfpsandiego/">Follow on Instagram</a>
         <a class="btn line" data-link="donate" href="https://caworkingfamilies.org/">Donate</a>
       </div>
       </div><svg class="roundel" viewBox="0 0 275 271" role="img" aria-label="Working Families Party roundel"><use href="#m-roundel"/></svg></div>
@@ -173,6 +175,7 @@ img{max-width:100%}
     <div class="wrap">
       <p><strong>Election Day is Tuesday, November 3</strong></p>
       <p>Register to vote online by October 19. <a href="https://registertovote.ca.gov/">Register or check your status →</a></p>
+      <a class="btn black" href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Read the WFP Voter Guide (PDF)</a>
     </div>
   </div>
 
@@ -206,6 +209,7 @@ img{max-width:100%}
         <p>Connect with the party and find your place in the movement. These links open the official CA WFP and national WFP sites.</p>
       </div>
       <ul class="ways">
+        <li><a href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener"><h3>Voter Guide</h3><p>See every California WFP endorsement for the November 3, 2026 general election, from Congress and statewide propositions to city councils and school boards.</p><span class="go">Read the voter guide (PDF) →</span></a></li>
         <li><a data-link="mobilize" href="https://www.mobilize.us/ca-wfp/"><h3>Upcoming Events</h3><p>Find chapter events, volunteer shifts, and CA WFP actions on Mobilize. RSVP and sign up to help near you.</p><span class="go">View on Mobilize →</span></a></li>
         <li><a data-link="signup" href="https://caworkingfamilies.org/"><h3>Sign Up for Updates</h3><p>Join the CA WFP contact list for texts and emails about organizing in San Diego County.</p><span class="go">Join the list →</span></a></li>
         <li><a data-link="member" href="https://caworkingfamilies.org/"><h3>Become a Member</h3><p>Support the work as a dues-paying member ($10/month or $120/year) and have a voice in party decisions, including endorsements.</p><span class="go">Join the party →</span></a></li>
@@ -251,9 +255,7 @@ img{max-width:100%}
         <p>Get chapter updates on social, and browse <a data-link="mobilize" href="https://www.mobilize.us/ca-wfp/">CA WFP events on Mobilize</a> to RSVP and volunteer.</p>
       </div>
       <div class="cta">
-        <a class="btn onpurple" data-link="instagram" href="https://caworkingfamilies.org/">Instagram</a>
-        <a class="btn onpurple" data-link="facebook" href="https://caworkingfamilies.org/">Facebook</a>
-        <a class="btn onpurple" data-link="bluesky" href="https://caworkingfamilies.org/">Bluesky</a>
+        <a class="btn onpurple" data-link="instagram" href="https://www.instagram.com/wfpsandiego/">Instagram @wfpsandiego</a>
       </div>
     </div>
   </section>
@@ -263,9 +265,8 @@ img{max-width:100%}
   <div class="wrap">
     <p class="brand"><svg aria-hidden="true"><use href="#m-abbr"/></svg>San Diego</p>
     <ul>
-      <li><a data-link="instagram" href="https://caworkingfamilies.org/">Instagram</a></li>
-      <li><a data-link="facebook" href="https://caworkingfamilies.org/">Facebook</a></li>
-      <li><a data-link="bluesky" href="https://caworkingfamilies.org/">Bluesky</a></li>
+      <li><a data-link="instagram" href="https://www.instagram.com/wfpsandiego/">Instagram</a></li>
+      <li><a href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Voter Guide</a></li>
       <li><a href="https://workingfamilies.org/">National WFP</a></li>
       <li><a href="https://caworkingfamilies.org/">CA WFP</a></li>
     </ul>
@@ -283,7 +284,7 @@ const LINKS = {
   donate: CA,     // donation page
   discord: CA,    // CA WFP Discord invite
   booking: CA,    // regional organizer's scheduling link
-  instagram: CA, facebook: CA, bluesky: CA
+  instagram: "https://www.instagram.com/wfpsandiego/"
 };
 document.querySelectorAll("[data-link]").forEach(a => { a.href = LINKS[a.dataset.link] || CA; });
 
