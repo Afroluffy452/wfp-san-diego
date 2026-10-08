@@ -114,6 +114,7 @@ form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
 label{font-weight:700;font-size:.9rem}
 input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:2px solid var(--ink);border-radius:0;padding:.7rem .8rem;width:100%}
 textarea{min-height:7rem;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .note{grid-column:1/-1;border-left:6px solid var(--marigold);background:var(--surface);padding:.8rem 1rem;font-size:.95rem}
 .note.err{border-color:var(--orange)}
 
@@ -144,7 +145,7 @@ img{max-width:100%}
       <a class="plain" data-link="events" href="calendar.html">Events</a>
       <a class="plain" href="#contact">Contact</a>
       <a href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Voter Guide</a>
-      <a class="btn" data-link="member" href="https://caworkingfamilies.org/">Join the Party</a>
+      <a class="btn" data-link="member" href="https://secure.actblue.com/donate/sandiegowfp">Join the Party</a>
     </nav>
   </div>
 </header>
@@ -161,7 +162,7 @@ img{max-width:100%}
         <a class="btn line" data-link="events" href="calendar.html">See Events</a>
         <a class="btn line" href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener">Voter Guide</a>
         <a class="btn line" data-link="instagram" href="https://www.instagram.com/wfpsandiego/">Follow on Instagram</a>
-        <a class="btn line" data-link="donate" href="https://caworkingfamilies.org/">Donate</a>
+        <a class="btn line" data-link="donate" href="https://secure.actblue.com/donate/sandiegowfp">Donate</a>
       </div>
       </div><svg class="roundel" viewBox="0 0 275 271" role="img" aria-label="Working Families Party roundel"><use href="#m-roundel"/></svg></div>
       <div class="roll" aria-label="Communities we organize in, north to south">
@@ -212,7 +213,7 @@ img{max-width:100%}
         <li><a href="https://www.caworkingfamilies.org/voter-guide-general-election-2026.pdf" target="_blank" rel="noopener"><h3>Voter Guide</h3><p>See every California WFP endorsement for the November 3, 2026 general election, from Congress and statewide propositions to city councils and school boards.</p><span class="go">Read the voter guide (PDF) →</span></a></li>
         <li><a data-link="mobilize" href="https://www.mobilize.us/ca-wfp/"><h3>Upcoming Events</h3><p>Find chapter events, volunteer shifts, and CA WFP actions on Mobilize. RSVP and sign up to help near you.</p><span class="go">View on Mobilize →</span></a></li>
         <li><a data-link="signup" href="https://caworkingfamilies.org/"><h3>Sign Up for Updates</h3><p>Join the CA WFP contact list for texts and emails about organizing in San Diego County.</p><span class="go">Join the list →</span></a></li>
-        <li><a data-link="member" href="https://caworkingfamilies.org/"><h3>Become a Member</h3><p>Support the work as a dues-paying member ($10/month or $120/year) and have a voice in party decisions, including endorsements.</p><span class="go">Join the party →</span></a></li>
+        <li><a data-link="member" href="https://secure.actblue.com/donate/sandiegowfp"><h3>Become a Member</h3><p>Support the work as a dues-paying member ($10/month or $120/year) and have a voice in party decisions, including endorsements.</p><span class="go">Join the party →</span></a></li>
         <li><a data-link="discord" href="https://caworkingfamilies.org/"><h3>Join CA WFP Discord</h3><p>Connect with members statewide for real-time conversation, organizing, and community building.</p><span class="go">Join Discord →</span></a></li>
         <li><a data-link="booking" href="https://caworkingfamilies.org/"><h3>Meet Your Organizer</h3><p>Schedule time with the San Diego regional organizer to learn how to plug in locally.</p><span class="go">Book a meeting →</span></a></li>
         <li><a href="https://workingfamilies.org/"><h3>National WFP</h3><p>See the Working Families Party's work across the country and how we are building power nationwide.</p><span class="go">Visit workingfamilies.org →</span></a></li>
@@ -241,6 +242,7 @@ img{max-width:100%}
             <option>Other</option>
           </select></div>
         <div class="f full"><label for="c-msg">Message</label><textarea id="c-msg" name="message"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="c-company">Company</label><input id="c-company" name="_honey" tabindex="-1" autocomplete="off"></div>
         <div class="f full"><button class="btn ink" type="submit">Send Message</button></div>
         <p class="note" id="form-note" role="status" hidden></p>
       </form>
@@ -280,23 +282,39 @@ const LINKS = {
   events: "calendar.html",
   mobilize: "https://www.mobilize.us/ca-wfp/",
   signup: CA,     // contact-list sign-up form
-  member: CA,     // dues membership page
-  donate: CA,     // donation page
+  member: "https://secure.actblue.com/donate/sandiegowfp",
+  donate: "https://secure.actblue.com/donate/sandiegowfp",
   discord: CA,    // CA WFP Discord invite
   booking: CA,    // regional organizer's scheduling link
   instagram: "https://www.instagram.com/wfpsandiego/"
 };
 document.querySelectorAll("[data-link]").forEach(a => { a.href = LINKS[a.dataset.link] || CA; });
 
-const form = document.getElementById("contact-form"), note = document.getElementById("form-note");
-form.addEventListener("submit", e => {
+// Contact form: FormSubmit emails each submission to the regional organizer.
+// The first submission ever triggers an activation email to that inbox; after activation,
+// FORM_TO can be swapped for the random alias FormSubmit provides so the address isn't in the page.
+const FORM_TO = "jkarahamuheto@workingfamilies.org";
+const form = document.getElementById("contact-form"), note = document.getElementById("form-note"), sendBtn = form.querySelector("button[type=submit]");
+const show = (msg, err) => { note.textContent = msg; note.classList.toggle("err", !!err); note.hidden = false; };
+form.addEventListener("submit", async e => {
   e.preventDefault();
-  const name = form.elements.name.value.trim(), email = form.elements.email.value.trim();
+  const f = form.elements, name = f.name.value.trim(), email = f.email.value.trim();
   const bad = !name ? "Enter your name so we know who to reply to."
     : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "Enter a valid email address so an organizer can reach you." : "";
-  note.classList.toggle("err", !!bad);
-  note.textContent = bad || "Preview only: this form is not connected yet, so nothing was sent.";
-  note.hidden = false;
+  if(bad) return show(bad, true);
+  if(f._honey.value) return show("Thanks! Your message was sent. A San Diego organizer will be in touch soon.");
+  sendBtn.disabled = true; sendBtn.textContent = "Sending…";
+  try{
+    const r = await fetch("https://formsubmit.co/ajax/" + FORM_TO, {method:"POST", headers:{"Content-Type":"application/json", Accept:"application/json"},
+      body:JSON.stringify({Name:name, Email:email, "Zip code":f.zip.value.trim(), "Wants to help with":f.help.value || "Not selected", Message:f.message.value.trim(),
+        _subject:"WFP San Diego website: message from " + name, _replyto:email, _template:"table", _captcha:"false"})});
+    const d = await r.json().catch(() => ({}));
+    if(!r.ok || String(d.success) !== "true") throw new Error(d.message || r.status);
+    form.reset();
+    show("Thanks! Your message was sent. A San Diego organizer will be in touch soon.");
+  }catch(err){
+    show("Your message didn't go through. Please try again in a minute, or message us on Instagram @wfpsandiego.", true);
+  }finally{ sendBtn.disabled = false; sendBtn.textContent = "Send Message"; }
 });
 </script>
 
