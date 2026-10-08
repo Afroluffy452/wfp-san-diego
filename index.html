@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Working Families Party San Diego: organizing for economic, racial, and climate justice across San Diego County.">
+<meta property="og:title" content="WFP San Diego | Working Families Party">
+<meta property="og:description" content="Making San Diego work for the many, not the few.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22852.4%20436.0%20229.2%20223.6%22%3E%3Cpath%20fill%3D%22%23F3563C%22%20d%3D%22M%20955.65%20493.44%20L%20955.65%20659.56%20L%20978.52%20659.56%20L%20978.52%20569.47%20L%201005.94%20569.47%20L%201005.94%20547.62%20L%20978.52%20547.62%20L%20978.52%20515.74%20L%201008.10%20515.74%20L%201008.10%20493.44%20Z%20M%20955.65%20493.44%20M%201044.09%20546.67%20L%201044.09%20603.98%20L%201020.99%20603.98%20L%201020.99%20437.85%20L%201063.73%20437.85%20C%201075.82%20437.85%201081.64%20446.78%201081.64%20457.92%20L%201081.64%20526.83%20C%201081.64%20538.19%201074.74%20546.67%201063.94%20546.67%20Z%20M%201055.09%20524.82%20C%201057.90%20524.82%201058.77%20522.81%201058.77%20520.57%20L%201058.77%20464.17%20C%201058.77%20461.93%201057.90%20459.92%201055.09%20459.92%20L%201044.09%20459.92%20L%201044.09%20524.82%20Z%20M%201055.09%20524.82%20M%20923.45%20437.85%20L%20919.84%20555.58%20L%20918.18%20555.58%20L%20910.71%20437.85%20L%20889.99%20437.85%20L%20883.10%20555.58%20L%20881.45%20555.58%20L%20877.04%20437.85%20L%20852.43%20437.85%20L%20866.89%20603.98%20L%20892.58%20603.98%20L%20899.38%20494.04%20L%20900.45%20494.04%20L%20906.82%20603.98%20L%20932.94%20603.98%20L%20948.06%20437.85%20Z%20M%20923.45%20437.85%20M%201050.21%20626.53%20L%201036.75%20617.96%20L%201045.67%20631.60%20L%201029.83%20635.19%20L%201045.67%20638.78%20L%201036.75%20652.42%20L%201050.21%20643.85%20L%201053.42%20659.56%20L%201056.63%20643.85%20L%201070.10%20652.42%20L%201061.17%20638.78%20L%201077.01%20635.19%20L%201061.17%20631.60%20L%201070.10%20617.96%20L%201056.63%20626.53%20L%201053.42%20610.83%20Z%20M%201050.21%20626.53%20M%20896.68%20626.53%20L%20883.21%20617.96%20L%20892.14%20631.60%20L%20876.30%20635.19%20L%20892.14%20638.78%20L%20883.21%20652.42%20L%20896.68%20643.85%20L%20899.89%20659.56%20L%20903.10%20643.85%20L%20916.57%20652.42%20L%20907.64%20638.78%20L%20923.48%20635.19%20L%20907.64%20631.60%20L%20916.57%20617.96%20L%20903.10%20626.53%20L%20899.89%20610.83%20Z%20M%20896.68%20626.53%20M%20978.61%20435.95%20L%20975.40%20451.65%20L%20961.93%20443.08%20L%20970.86%20456.73%20L%20955.02%20460.32%20L%20970.86%20463.91%20L%20961.93%20477.55%20L%20975.40%20468.98%20L%20978.61%20484.68%20L%20981.82%20468.98%20L%20995.29%20477.55%20L%20986.36%20463.91%20L%201002.19%20460.32%20L%20986.36%20456.73%20L%20995.29%20443.08%20L%20981.82%20451.65%20Z%20M%20978.61%20435.95%22/%3E%3C/svg%3E">
+<title>WFP San Diego | Working Families Party</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Extra+Condensed:wght@300;400&display=swap">
+<style>
+/* Layout: WFP brand system. Working Orange slab opens the page (orange as background, per the
+   3-color rule) with the white/black headline and the Roundel; left-aligned columns after.
+   Palette is the guideline palette only, no tints or shades. Core family: Orange + Marigold + Grape. */
+:root{
+  --orange:#F3563C; --marigold:#FFCC08; --grape:#461F83; --citrus:#E8F77D; --black:#000000; --white:#FFFFFF;
+  --paper:#E9E7DF; --surface:#FFFFFF; --ink:#000000; --accent:#461F83; --link:#461F83;
+  --display:"PF Venue Condensed","Bebas Neue","Arial Narrow",Impact,sans-serif;
+  --sub:"PF Venue Condensed","Saira Extra Condensed","Arial Narrow",sans-serif;
+  --body:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#330E25; --surface:#000000; --ink:#E9E7DF; --accent:#FFCC08; --link:#E8F77D; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#330E25; --surface:#000000; --ink:#E9E7DF; --accent:#FFCC08; --link:#E8F77D; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.5;letter-spacing:.01em}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--citrus);outline-offset:2px;box-shadow:0 0 0 6px var(--black)}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.9;margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-family:var(--sub);font-weight:300;font-size:1.5rem;line-height:.95;text-transform:uppercase;color:var(--accent)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--black);color:var(--white)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.6rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--white);text-decoration:none;font-family:var(--display);font-size:1.6rem;text-transform:uppercase;line-height:.9}
+.brand svg{width:2.3rem;height:2.3rem;color:var(--orange);flex:none}
+.nav{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.nav a{color:var(--white);text-decoration:none;font-size:.95rem}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:44rem){ .nav a.plain{display:none} }
+
+.btn{display:inline-block;font-family:var(--display);font-size:1.35rem;line-height:1;text-transform:uppercase;text-decoration:none;padding:.7rem 1.2rem .6rem;border:2px solid var(--black);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.black{background:var(--black);color:var(--white)}
+.btn.line{background:transparent;color:var(--black)}
+.btn.citrus,.nav a.btn{background:var(--citrus);color:var(--black);border-color:var(--citrus)}
+.nav a.btn{font-size:1.15rem;padding:.5rem .8rem .4rem}
+.btn.marigold{background:var(--marigold);color:var(--black);border-color:var(--marigold)}
+.btn.onpurple{background:transparent;color:var(--white);border-color:var(--white)}
+.btn.ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* hero */
+.hero{background:var(--orange);color:var(--black);overflow:hidden}
+.hero .wrap{padding-block:clamp(2rem,6vw,4.5rem) 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:2rem;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:1.4rem;min-width:0}
+.hero .eyebrow{color:var(--black)}
+.hero h1{font-size:clamp(3.4rem,10.5vw,8.5rem);line-height:.85;color:var(--white)}
+.hero h1 em{font-style:normal;color:var(--black)}
+.hero .lede{max-width:38rem;font-size:1.15rem}
+.roundel{color:var(--citrus);width:100%;max-width:24rem;justify-self:end;transform:rotate(-8deg)}
+@media (max-width:52rem){ .hero-grid{grid-template-columns:minmax(0,1fr)} .roundel{order:-1;max-width:8.5rem;justify-self:start} }
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.roll{margin-top:2.2rem;border-top:3px solid var(--black);padding-block:.9rem 1.2rem;display:flex;flex-wrap:wrap;gap:.2rem .9rem;align-items:baseline;font-family:var(--display);text-transform:uppercase;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1}
+.roll small{font-family:var(--sub);font-weight:300;font-size:1.3rem;flex-basis:100%}
+.roll span::after{content:"\2736";margin-left:.9rem;color:var(--white);font-family:var(--body);font-size:.7em}
+.roll span:last-child::after{content:none}
+
+/* election strip */
+.vote{background:var(--marigold);color:var(--black)}
+.vote .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-block:.9rem}
+.vote strong{font-family:var(--display);font-weight:400;font-size:1.9rem;text-transform:uppercase;line-height:.9}
+.vote a{color:var(--black);font-weight:700}
+
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.head{display:flex;flex-direction:column;gap:.5rem;margin-bottom:2rem}
+.head h2{font-size:clamp(3rem,7.5vw,5.5rem)}
+.head p:not(.eyebrow){max-width:42rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:52rem){ .about{grid-template-columns:minmax(0,1fr)} }
+.prose{display:flex;flex-direction:column;gap:1.1rem;max-width:40rem}
+.events{background:var(--grape);color:var(--white);padding:1.6rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.events svg{width:7rem;color:var(--marigold)}
+.events h3{font-size:2.8rem}
+
+/* get involved */
+.band{background:var(--surface);border-block:3px solid var(--ink)}
+.ways{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));border-top:3px solid var(--ink)}
+.ways li{display:flex;border-bottom:1px solid var(--ink)}
+.ways a{display:flex;flex-direction:column;gap:.5rem;padding:1.4rem 1.4rem 1.4rem 0;color:var(--ink);text-decoration:none;min-width:0;width:100%}
+.ways h3{font-size:2.2rem}
+.ways p{font-size:.98rem}
+.ways .go{margin-top:auto;padding-top:.4rem;font-weight:700;color:var(--link)}
+.ways a:hover h3{color:var(--orange)}
+.ways a:hover .go{text-decoration:underline;text-underline-offset:4px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:52rem){ .contact{grid-template-columns:minmax(0,1fr)} }
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.f{display:flex;flex-direction:column;gap:.35rem}
+.f.full{grid-column:1/-1}
+@media (max-width:30rem){ .f{grid-column:1/-1} }
+label{font-weight:700;font-size:.9rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:2px solid var(--ink);border-radius:0;padding:.7rem .8rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+.note{grid-column:1/-1;border-left:6px solid var(--marigold);background:var(--surface);padding:.8rem 1rem;font-size:.95rem}
+.note.err{border-color:var(--orange)}
+
+/* follow + footer */
+.follow{background:var(--grape);color:var(--white)}
+.follow .eyebrow{color:var(--marigold)}
+.follow a:not(.btn){color:var(--white)}
+footer{background:var(--black);color:var(--white)}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding-block:1.6rem;font-size:.92rem}
+footer .brand{font-size:1.4rem}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem 1.3rem}
+footer a{color:var(--white)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<a href="#main-content" style="position:absolute;left:-999px">Skip to main content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="m-wolf" viewBox="633.5 66.2 308.6 262.6"><path fill="currentColor" d="M 687.01 127.34 L 634.64 150.50 L 633.45 194.41 L 663.64 215.72 L 694.36 222.62 L 662.35 265.50 L 651.63 328.82 L 659.09 328.82 L 680.99 278.61 L 740.39 255.44 L 707.07 287.74 L 724.32 328.82 L 732.24 328.82 L 724.32 287.74 L 764.62 256.37 L 782.80 266.67 L 774.14 328.82 L 784.51 328.82 L 801.46 273.69 L 827.65 248.54 L 854.33 328.82 L 862.00 328.82 L 851.16 240.21 L 865.21 205.46 L 889.49 209.90 L 909.33 202.55 L 914.02 190.29 L 880.27 175.59 L 876.45 158.62 L 853.14 156.16 L 832.56 127.99 L 823.69 164.62 L 803.21 174.41 L 793.83 192.46 L 723.23 191.87 L 725.09 202.64 L 664.67 194.81 L 654.15 169.75 L 716.17 169.50 L 739.72 131.35 L 723.55 98.59 L 669.35 82.80 Z M 687.01 127.34 M 908.34 66.23 L 903.76 87.94 L 884.50 76.10 L 897.26 94.96 L 874.62 99.92 L 897.26 104.88 L 884.50 123.73 L 903.76 111.89 L 908.34 133.60 L 912.93 111.89 L 932.19 123.73 L 919.42 104.88 L 942.07 99.92 L 919.42 94.96 L 932.19 76.10 L 912.93 87.94 Z M 908.34 66.23"/></symbol><symbol id="m-roundel" viewBox="423.2 410.2 274.6 271.0"><path fill="currentColor" d="M 496.21 644.87 L 487.30 659.21 L 481.33 655.50 L 507.16 613.94 L 518.21 620.80 C 521.33 622.74 521.45 625.91 519.72 628.70 L 509.00 645.94 C 507.23 648.79 504.13 649.80 501.34 648.06 Z M 502.45 641.17 C 503.18 641.62 503.71 641.26 504.06 640.70 L 512.84 626.59 C 513.18 626.03 513.27 625.39 512.55 624.94 L 509.70 623.17 L 499.60 639.40 Z M 502.45 641.17 M 511.21 671.76 L 531.44 626.71 L 539.87 629.21 L 532.06 677.95 L 524.87 675.82 L 526.39 668.39 L 521.10 666.82 L 518.39 673.90 Z M 531.99 640.31 L 531.68 640.21 L 523.60 660.50 L 527.76 661.73 Z M 531.99 640.31 M 553.78 663.25 L 552.26 680.07 L 545.25 679.44 L 549.65 630.67 L 562.61 631.83 C 566.28 632.17 567.80 634.94 567.51 638.22 L 565.67 658.71 C 565.44 661.19 564.21 663.79 560.58 663.86 L 563.10 666.66 L 565.55 681.27 L 558.28 680.61 L 555.54 663.41 Z M 557.69 657.13 C 558.54 657.21 558.85 656.64 558.92 655.99 L 560.41 639.42 C 560.46 638.77 560.26 638.16 559.41 638.08 L 556.07 637.78 L 554.35 656.83 Z M 557.69 657.13 M 599.19 675.03 L 592.40 676.84 L 581.48 635.87 L 575.76 637.40 L 574.07 631.05 L 592.37 626.17 L 594.05 632.52 L 588.28 634.06 Z M 599.19 675.03 M 617.91 633.80 L 611.07 615.73 L 617.07 611.94 L 626.14 640.66 L 636.76 657.44 L 630.92 661.13 L 620.44 644.57 L 597.90 624.07 L 604.12 620.13 L 617.69 633.94 Z M 617.91 633.80 M 447.55 586.05 L 478.64 576.72 L 481.36 584.05 L 437.03 605.24 L 434.41 598.22 L 466.44 584.83 L 466.33 584.53 L 433.04 594.53 L 430.84 588.62 L 462.50 574.24 L 462.39 573.93 L 429.49 584.98 L 426.87 577.96 L 474.35 565.21 L 477.12 572.66 L 447.46 585.80 Z M 447.55 586.05 M 472.70 553.01 C 472.89 556.29 470.45 558.53 467.11 558.73 L 430.05 560.88 C 426.76 561.07 424.04 559.45 423.83 555.78 L 423.37 547.91 C 423.15 544.23 425.68 542.31 428.96 542.12 L 466.01 539.97 C 469.36 539.78 472.04 541.73 472.23 545.01 Z M 465.89 548.07 C 465.84 547.22 465.24 546.99 464.58 547.03 L 431.20 548.96 C 430.54 549.00 429.97 549.30 430.01 550.16 L 430.16 552.58 C 430.21 553.5 430.82 553.79 431.48 553.75 L 464.86 551.82 C 465.65 551.77 466.07 551.16 466.04 550.57 Z M 465.89 548.07 M 457.42 523.19 L 473.91 526.84 L 472.39 533.71 L 424.59 523.12 L 427.40 510.42 C 428.20 506.83 431.15 505.66 434.36 506.37 L 454.44 510.82 C 456.88 511.36 459.29 512.91 458.90 516.52 L 462.00 514.38 L 476.79 513.82 L 475.21 520.94 L 457.81 521.46 Z M 451.86 518.53 C 452.04 517.69 451.52 517.31 450.88 517.17 L 434.65 513.57 C 434.00 513.42 433.37 513.56 433.19 514.39 L 432.46 517.66 L 451.14 521.80 Z M 451.86 518.53 M 465.47 487.28 L 488.70 491.33 L 485.01 498.00 L 473.41 495.49 L 482.00 503.46 L 478.91 509.04 L 436.04 485.35 L 439.61 478.92 L 458.71 489.47 L 458.83 489.24 L 442.34 473.98 L 445.67 467.94 Z M 465.47 487.28 M 492.30 487.73 L 455.73 455.17 L 460.45 449.87 L 497.01 482.43 Z M 492.30 487.73 M 497.07 448.33 L 484.12 429.81 L 489.94 425.75 L 517.98 465.85 L 512.44 469.73 L 493.60 452.53 L 493.38 452.68 L 507.65 473.08 L 501.94 477.07 L 473.90 436.96 L 479.5 433.05 L 496.86 448.48 Z M 497.07 448.33 M 541.20 457.12 L 538.39 458.07 L 536.09 456.00 C 535.81 457.83 534.60 459.35 532.61 460.03 L 528.50 461.42 C 525.38 462.48 522.58 460.73 521.5 457.55 L 509.55 422.39 C 508.50 419.28 509.33 416.22 512.82 415.04 L 520.29 412.50 C 523.77 411.32 526.30 413.24 527.35 416.35 L 530.97 427 L 524.37 429.23 L 521.35 420.33 C 521.14 419.71 520.70 419.23 519.89 419.51 L 517.58 420.29 C 516.71 420.59 516.59 421.25 516.80 421.88 L 527.56 453.55 C 527.82 454.30 528.52 454.55 529.08 454.35 L 532.51 453.19 L 528.72 442.05 L 526.42 442.83 L 524.37 436.80 L 533.27 433.78 Z M 541.20 457.12 M 593.05 410.25 L 608.36 414.79 L 606.49 421.09 L 597.86 418.53 L 595.19 427.53 L 603.18 429.91 L 601.35 436.08 L 593.35 433.70 L 585.79 459.14 L 579.12 457.16 Z M 593.05 410.25 M 595.07 461.74 L 625.08 422.55 L 632.72 426.93 L 613.92 472.55 L 607.42 468.83 L 610.61 461.94 L 605.82 459.21 L 601.55 465.46 Z M 622.50 435.91 L 622.22 435.75 L 609.70 453.63 L 613.46 455.78 Z M 622.50 435.91 M 639.38 472.19 L 645.69 459.67 L 645.51 459.48 L 622.36 480.39 L 617.73 475.27 L 654.06 442.47 L 658.72 447.64 L 651.16 461.91 L 651.34 462.10 L 666.25 455.98 L 671.01 461.25 L 634.69 494.05 L 629.98 488.83 L 653.14 467.91 L 652.96 467.72 L 639.91 472.78 Z M 639.38 472.19 M 637.42 500.00 L 680.89 477.46 L 684.16 483.76 L 640.69 506.30 Z M 637.42 500.00 M 690.65 499.23 L 692.59 505.92 L 651.83 517.73 L 654.13 525.67 L 647.88 527.48 L 643.64 512.85 Z M 690.65 499.23 M 648.45 533.65 L 697.25 530.07 L 697.77 537.15 L 648.97 540.73 Z M 648.45 533.65 M 697.76 554.03 L 695.72 569.99 L 689.19 569.15 L 690.36 560.10 L 681.03 558.89 L 679.94 567.36 L 673.49 566.53 L 674.57 558.06 L 654.75 555.51 L 653.60 564.57 L 647.14 563.73 L 649.18 547.77 Z M 697.76 554.03 M 674.89 589.34 C 672.46 588.32 671.44 588.39 669.97 588.84 L 658.29 592.19 C 655.14 593.07 653.13 592.94 649.92 591.58 L 643.87 589.03 C 640.78 587.74 639.23 584.80 640.51 581.78 L 643.64 574.33 C 644.92 571.30 648.09 570.36 651.18 571.66 L 660.39 575.54 L 657.66 582.01 L 650.16 578.85 C 649.42 578.55 648.77 578.91 648.54 579.46 L 647.55 581.82 C 647.21 582.61 647.66 583.08 648.26 583.33 L 650.63 584.33 C 653.35 585.48 654.26 585.50 657.71 584.60 L 667.92 581.85 C 671.05 581.03 672.59 580.75 675.86 582.12 L 685.36 586.13 C 688.39 587.41 690.12 590.06 688.70 593.45 L 685.74 600.47 C 684.32 603.86 681.21 604.48 678.18 603.20 L 666.37 598.23 L 669.08 591.81 L 679.18 596.07 C 679.79 596.32 680.44 596.31 680.77 595.53 L 681.61 593.53 C 681.96 592.68 681.55 592.15 680.95 591.89 Z M 674.89 589.34 M 473.65 601.58 L 475.73 611.42 L 484.45 606.05 L 478.67 614.60 L 488.92 616.85 L 478.67 619.10 L 484.45 627.65 L 475.73 622.28 L 473.65 632.12 L 471.58 622.28 L 462.85 627.65 L 468.64 619.10 L 458.38 616.85 L 468.64 614.60 L 462.85 606.05 L 471.58 611.42 Z M 473.65 601.58 M 647.62 601.58 L 649.69 611.42 L 658.42 606.05 L 652.64 614.60 L 662.89 616.85 L 652.64 619.10 L 658.42 627.65 L 649.69 622.28 L 647.62 632.12 L 645.54 622.28 L 636.82 627.65 L 642.60 619.10 L 632.35 616.85 L 642.60 614.60 L 636.82 606.05 L 645.54 611.42 Z M 647.62 601.58 M 560.64 416.46 L 562.71 426.30 L 571.44 420.94 L 565.66 429.48 L 575.91 431.73 L 565.66 433.98 L 571.44 442.53 L 562.71 437.16 L 560.64 447.01 L 558.56 437.16 L 549.84 442.53 L 555.62 433.98 L 545.37 431.73 L 555.62 429.48 L 549.84 420.94 L 558.56 426.30 Z M 560.64 416.46"/></symbol><symbol id="m-abbr" viewBox="852.4 436.0 229.2 223.6"><path fill="currentColor" d="M 955.65 493.44 L 955.65 659.56 L 978.52 659.56 L 978.52 569.47 L 1005.94 569.47 L 1005.94 547.62 L 978.52 547.62 L 978.52 515.74 L 1008.10 515.74 L 1008.10 493.44 Z M 955.65 493.44 M 1044.09 546.67 L 1044.09 603.98 L 1020.99 603.98 L 1020.99 437.85 L 1063.73 437.85 C 1075.82 437.85 1081.64 446.78 1081.64 457.92 L 1081.64 526.83 C 1081.64 538.19 1074.74 546.67 1063.94 546.67 Z M 1055.09 524.82 C 1057.90 524.82 1058.77 522.81 1058.77 520.57 L 1058.77 464.17 C 1058.77 461.93 1057.90 459.92 1055.09 459.92 L 1044.09 459.92 L 1044.09 524.82 Z M 1055.09 524.82 M 923.45 437.85 L 919.84 555.58 L 918.18 555.58 L 910.71 437.85 L 889.99 437.85 L 883.10 555.58 L 881.45 555.58 L 877.04 437.85 L 852.43 437.85 L 866.89 603.98 L 892.58 603.98 L 899.38 494.04 L 900.45 494.04 L 906.82 603.98 L 932.94 603.98 L 948.06 437.85 Z M 923.45 437.85 M 1050.21 626.53 L 1036.75 617.96 L 1045.67 631.60 L 1029.83 635.19 L 1045.67 638.78 L 1036.75 652.42 L 1050.21 643.85 L 1053.42 659.56 L 1056.63 643.85 L 1070.10 652.42 L 1061.17 638.78 L 1077.01 635.19 L 1061.17 631.60 L 1070.10 617.96 L 1056.63 626.53 L 1053.42 610.83 Z M 1050.21 626.53 M 896.68 626.53 L 883.21 617.96 L 892.14 631.60 L 876.30 635.19 L 892.14 638.78 L 883.21 652.42 L 896.68 643.85 L 899.89 659.56 L 903.10 643.85 L 916.57 652.42 L 907.64 638.78 L 923.48 635.19 L 907.64 631.60 L 916.57 617.96 L 903.10 626.53 L 899.89 610.83 Z M 896.68 626.53 M 978.61 435.95 L 975.40 451.65 L 961.93 443.08 L 970.86 456.73 L 955.02 460.32 L 970.86 463.91 L 961.93 477.55 L 975.40 468.98 L 978.61 484.68 L 981.82 468.98 L 995.29 477.55 L 986.36 463.91 L 1002.19 460.32 L 986.36 456.73 L 995.29 443.08 L 981.82 451.65 Z M 978.61 435.95"/></symbol></svg>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><svg aria-hidden="true"><use href="#m-abbr"/></svg>San Diego</a>
+    <nav class="nav" aria-label="Main">
+      <a class="plain" href="#about">About</a>
+      <a class="plain" href="#get-involved">Get Involved</a>
+      <a class="plain" data-link="events" href="#">Events</a>
+      <a class="plain" href="#contact">Contact</a>
+      <a class="btn" data-link="member" href="#">Join the Party</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid"><div class="hero-copy">
+      <p class="eyebrow">California Working Families Party · San Diego</p>
+      <h1>Making our region work for <em>the many, not the few.</em></h1>
+      <p class="lede">Working Families Party organizers from Oceanside to Imperial Beach, building power for workers, renters, and families across San Diego County.</p>
+      <div class="cta">
+        <a class="btn black" href="#get-involved">Get Involved</a>
+        <a class="btn line" data-link="events" href="#">See Events</a>
+        <a class="btn line" data-link="instagram" href="#">Follow on Instagram</a>
+        <a class="btn line" data-link="donate" href="#">Donate</a>
+      </div>
+      </div><svg class="roundel" viewBox="0 0 275 271" role="img" aria-label="Working Families Party roundel"><use href="#m-roundel"/></svg></div>
+      <div class="roll" aria-label="Communities we organize in, north to south">
+        <small>ORGANIZING IN</small>
+        <span>Oceanside</span><span>Vista</span><span>Escondido</span><span>San Diego</span><span>El Cajon</span><span>Lemon Grove</span><span>National City</span><span>Chula Vista</span><span>Imperial Beach</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="vote">
+    <div class="wrap">
+      <p><strong>Election Day is Tuesday, November 3</strong></p>
+      <p>Register to vote online by October 19. <a href="https://registertovote.ca.gov/">Register or check your status →</a></p>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">About Us</p>
+        <h2>Organizing San Diego</h2>
+      </div>
+      <div class="about">
+        <div class="prose">
+          <p>The Working Families Party fights for economic, racial, and climate justice: workers over bosses, people over the powerful. We organize on top of and around the two-party system to elect champions for working families and win bold policies that put communities first.</p>
+          <p>WFP San Diego is the regional chapter of the California Working Families Party. We are part of a statewide multiracial coalition of grassroots organizations and labor unions, building real governing power from school boards and water districts to Congress.</p>
+          <p>From rising rents to corporate price gouging, families across our region deserve leaders with the backbone to fight for health care and housing for all, fully funded schools, and a California that works for everyone, in the coastal cities, East County, and the South Bay alike.</p>
+        </div>
+        <aside class="events">
+          <svg viewBox="0 0 309 263" role="img" aria-label="WFP wolf"><use href="#m-wolf"/></svg>
+          <h3>Upcoming Events</h3>
+          <p>See San Diego events and statewide CA WFP actions on our calendar. RSVP, pick up a volunteer shift, and find a gathering near you.</p>
+          <a class="btn marigold" data-link="events" href="#">Browse Events</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="get-involved">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Take Action</p>
+        <h2>Get Involved</h2>
+        <p>Connect with the party and find your place in the movement. These links open the official CA WFP and national WFP sites.</p>
+      </div>
+      <ul class="ways">
+        <li><a data-link="mobilize" href="#"><h3>Upcoming Events</h3><p>Find chapter events, volunteer shifts, and CA WFP actions on Mobilize. RSVP and sign up to help near you.</p><span class="go">View on Mobilize →</span></a></li>
+        <li><a data-link="signup" href="#"><h3>Sign Up for Updates</h3><p>Join the CA WFP contact list for texts and emails about organizing in San Diego County.</p><span class="go">Join the list →</span></a></li>
+        <li><a data-link="member" href="#"><h3>Become a Member</h3><p>Support the work as a dues-paying member ($10/month or $120/year) and have a voice in party decisions, including endorsements.</p><span class="go">Join the party →</span></a></li>
+        <li><a data-link="discord" href="#"><h3>Join CA WFP Discord</h3><p>Connect with members statewide for real-time conversation, organizing, and community building.</p><span class="go">Join Discord →</span></a></li>
+        <li><a data-link="booking" href="#"><h3>Meet Your Organizer</h3><p>Schedule time with the San Diego regional organizer to learn how to plug in locally.</p><span class="go">Book a meeting →</span></a></li>
+        <li><a href="https://workingfamilies.org/"><h3>National WFP</h3><p>See the Working Families Party's work across the country and how we are building power nationwide.</p><span class="go">Visit workingfamilies.org →</span></a></li>
+        <li><a href="https://caworkingfamilies.org/"><h3>California WFP</h3><p>Explore endorsements, elected champions, and statewide campaigns from California Working Families Party.</p><span class="go">Visit caworkingfamilies.org →</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="head">
+        <p class="eyebrow">Contact</p>
+        <h2>Reach the Regional Team</h2>
+        <p>Want to volunteer, host an event, or learn more about WFP in San Diego? Fill out the form and a local organizer will follow up.</p>
+      </div>
+      <form id="contact-form" novalidate>
+        <div class="f"><label for="c-name">Name *</label><input id="c-name" name="name" autocomplete="name" required></div>
+        <div class="f"><label for="c-email">Email *</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="f"><label for="c-zip">Zip Code</label><input id="c-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5"></div>
+        <div class="f"><label for="c-help">How do you want to help?</label>
+          <select id="c-help" name="help">
+            <option value="">Select one…</option>
+            <option>Events &amp; tabling</option>
+            <option>Outreach &amp; phone banking</option>
+            <option>Endorsements &amp; voter education</option>
+            <option>Other</option>
+          </select></div>
+        <div class="f full"><label for="c-msg">Message</label><textarea id="c-msg" name="message"></textarea></div>
+        <div class="f full"><button class="btn ink" type="submit">Send Message</button></div>
+        <p class="note" id="form-note" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <section class="follow">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Stay Connected</p>
+        <h2>Follow Us</h2>
+        <p>Get chapter updates on social, and browse <a data-link="mobilize" href="#">CA WFP events on Mobilize</a> to RSVP and volunteer.</p>
+      </div>
+      <div class="cta">
+        <a class="btn onpurple" data-link="instagram" href="#">Instagram</a>
+        <a class="btn onpurple" data-link="facebook" href="#">Facebook</a>
+        <a class="btn onpurple" data-link="bluesky" href="#">Bluesky</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="brand"><svg aria-hidden="true"><use href="#m-abbr"/></svg>San Diego</p>
+    <ul>
+      <li><a data-link="instagram" href="#">Instagram</a></li>
+      <li><a data-link="facebook" href="#">Facebook</a></li>
+      <li><a data-link="bluesky" href="#">Bluesky</a></li>
+      <li><a href="https://workingfamilies.org/">National WFP</a></li>
+      <li><a href="https://caworkingfamilies.org/">CA WFP</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+// Replace each placeholder with the chapter's real link. Until then they open the CA WFP site.
+const CA = "https://caworkingfamilies.org/";
+const LINKS = {
+  events: "calendar.html",
+  mobilize: "https://www.mobilize.us/ca-wfp/",
+  signup: CA,     // contact-list sign-up form
+  member: CA,     // dues membership page
+  donate: CA,     // donation page
+  discord: CA,    // CA WFP Discord invite
+  booking: CA,    // regional organizer's scheduling link
+  instagram: CA, facebook: CA, bluesky: CA
+};
+document.querySelectorAll("[data-link]").forEach(a => { a.href = LINKS[a.dataset.link] || CA; });
+
+const form = document.getElementById("contact-form"), note = document.getElementById("form-note");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const name = form.elements.name.value.trim(), email = form.elements.email.value.trim();
+  const bad = !name ? "Enter your name so we know who to reply to."
+    : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "Enter a valid email address so an organizer can reach you." : "";
+  note.classList.toggle("err", !!bad);
+  note.textContent = bad || "Preview only: this form is not connected yet, so nothing was sent.";
+  note.hidden = false;
+});
+</script>
+
+</body>
+</html>

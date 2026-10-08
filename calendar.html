@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Events Calendar | WFP San Diego</title>
+<meta name="description" content="Upcoming and recent Working Families Party events across San Diego County.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22852.4%20436.0%20229.2%20223.6%22%3E%3Cpath%20fill%3D%22%23F3563C%22%20d%3D%22M%20955.65%20493.44%20L%20955.65%20659.56%20L%20978.52%20659.56%20L%20978.52%20569.47%20L%201005.94%20569.47%20L%201005.94%20547.62%20L%20978.52%20547.62%20L%20978.52%20515.74%20L%201008.10%20515.74%20L%201008.10%20493.44%20Z%20M%20955.65%20493.44%20M%201044.09%20546.67%20L%201044.09%20603.98%20L%201020.99%20603.98%20L%201020.99%20437.85%20L%201063.73%20437.85%20C%201075.82%20437.85%201081.64%20446.78%201081.64%20457.92%20L%201081.64%20526.83%20C%201081.64%20538.19%201074.74%20546.67%201063.94%20546.67%20Z%20M%201055.09%20524.82%20C%201057.90%20524.82%201058.77%20522.81%201058.77%20520.57%20L%201058.77%20464.17%20C%201058.77%20461.93%201057.90%20459.92%201055.09%20459.92%20L%201044.09%20459.92%20L%201044.09%20524.82%20Z%20M%201055.09%20524.82%20M%20923.45%20437.85%20L%20919.84%20555.58%20L%20918.18%20555.58%20L%20910.71%20437.85%20L%20889.99%20437.85%20L%20883.10%20555.58%20L%20881.45%20555.58%20L%20877.04%20437.85%20L%20852.43%20437.85%20L%20866.89%20603.98%20L%20892.58%20603.98%20L%20899.38%20494.04%20L%20900.45%20494.04%20L%20906.82%20603.98%20L%20932.94%20603.98%20L%20948.06%20437.85%20Z%20M%20923.45%20437.85%20M%201050.21%20626.53%20L%201036.75%20617.96%20L%201045.67%20631.60%20L%201029.83%20635.19%20L%201045.67%20638.78%20L%201036.75%20652.42%20L%201050.21%20643.85%20L%201053.42%20659.56%20L%201056.63%20643.85%20L%201070.10%20652.42%20L%201061.17%20638.78%20L%201077.01%20635.19%20L%201061.17%20631.60%20L%201070.10%20617.96%20L%201056.63%20626.53%20L%201053.42%20610.83%20Z%20M%201050.21%20626.53%20M%20896.68%20626.53%20L%20883.21%20617.96%20L%20892.14%20631.60%20L%20876.30%20635.19%20L%20892.14%20638.78%20L%20883.21%20652.42%20L%20896.68%20643.85%20L%20899.89%20659.56%20L%20903.10%20643.85%20L%20916.57%20652.42%20L%20907.64%20638.78%20L%20923.48%20635.19%20L%20907.64%20631.60%20L%20916.57%20617.96%20L%20903.10%20626.53%20L%20899.89%20610.83%20Z%20M%20896.68%20626.53%20M%20978.61%20435.95%20L%20975.40%20451.65%20L%20961.93%20443.08%20L%20970.86%20456.73%20L%20955.02%20460.32%20L%20970.86%20463.91%20L%20961.93%20477.55%20L%20975.40%20468.98%20L%20978.61%20484.68%20L%20981.82%20468.98%20L%20995.29%20477.55%20L%20986.36%20463.91%20L%201002.19%20460.32%20L%20986.36%20456.73%20L%20995.29%20443.08%20L%20981.82%20451.65%20Z%20M%20978.61%20435.95%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Extra+Condensed:wght@300;400&display=swap">
+<style>
+/* Layout: WFP brand system. Working Orange slab opens the page (orange as background, per the
+   3-color rule) with the white/black headline and the Roundel; left-aligned columns after.
+   Palette is the guideline palette only, no tints or shades. Core family: Orange + Marigold + Grape. */
+:root{
+  --orange:#F3563C; --marigold:#FFCC08; --grape:#461F83; --citrus:#E8F77D; --black:#000000; --white:#FFFFFF;
+  --paper:#E9E7DF; --surface:#FFFFFF; --ink:#000000; --accent:#461F83; --link:#461F83;
+  --display:"PF Venue Condensed","Bebas Neue","Arial Narrow",Impact,sans-serif;
+  --sub:"PF Venue Condensed","Saira Extra Condensed","Arial Narrow",sans-serif;
+  --body:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#330E25; --surface:#000000; --ink:#E9E7DF; --accent:#FFCC08; --link:#E8F77D; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#330E25; --surface:#000000; --ink:#E9E7DF; --accent:#FFCC08; --link:#E8F77D; color-scheme:dark }
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none!important} }
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.5;letter-spacing:.01em}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--citrus);outline-offset:2px;box-shadow:0 0 0 6px var(--black)}
+.wrap{max-width:70rem;margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.9;margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font-family:var(--sub);font-weight:300;font-size:1.5rem;line-height:.95;text-transform:uppercase;color:var(--accent)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--black);color:var(--white)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.6rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.7rem;color:var(--white);text-decoration:none;font-family:var(--display);font-size:1.6rem;text-transform:uppercase;line-height:.9}
+.brand svg{width:2.3rem;height:2.3rem;color:var(--orange);flex:none}
+.nav{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+.nav a{color:var(--white);text-decoration:none;font-size:.95rem}
+.nav a:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:44rem){ .nav a.plain{display:none} }
+
+.btn{display:inline-block;font-family:var(--display);font-size:1.35rem;line-height:1;text-transform:uppercase;text-decoration:none;padding:.7rem 1.2rem .6rem;border:2px solid var(--black);cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.black{background:var(--black);color:var(--white)}
+.btn.line{background:transparent;color:var(--black)}
+.btn.citrus,.nav a.btn{background:var(--citrus);color:var(--black);border-color:var(--citrus)}
+.nav a.btn{font-size:1.15rem;padding:.5rem .8rem .4rem}
+.btn.marigold{background:var(--marigold);color:var(--black);border-color:var(--marigold)}
+.btn.onpurple{background:transparent;color:var(--white);border-color:var(--white)}
+.btn.ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* hero */
+.hero{background:var(--orange);color:var(--black);overflow:hidden}
+.hero .wrap{padding-block:clamp(2rem,6vw,4.5rem) 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:2rem;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:1.4rem;min-width:0}
+.hero .eyebrow{color:var(--black)}
+.hero h1{font-size:clamp(3.4rem,10.5vw,8.5rem);line-height:.85;color:var(--white)}
+.hero h1 em{font-style:normal;color:var(--black)}
+.hero .lede{max-width:38rem;font-size:1.15rem}
+.roundel{color:var(--citrus);width:100%;max-width:24rem;justify-self:end;transform:rotate(-8deg)}
+@media (max-width:52rem){ .hero-grid{grid-template-columns:minmax(0,1fr)} .roundel{order:-1;max-width:8.5rem;justify-self:start} }
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.roll{margin-top:2.2rem;border-top:3px solid var(--black);padding-block:.9rem 1.2rem;display:flex;flex-wrap:wrap;gap:.2rem .9rem;align-items:baseline;font-family:var(--display);text-transform:uppercase;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1}
+.roll small{font-family:var(--sub);font-weight:300;font-size:1.3rem;flex-basis:100%}
+.roll span::after{content:"\2736";margin-left:.9rem;color:var(--white);font-family:var(--body);font-size:.7em}
+.roll span:last-child::after{content:none}
+
+/* election strip */
+.vote{background:var(--marigold);color:var(--black)}
+.vote .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-block:.9rem}
+.vote strong{font-family:var(--display);font-weight:400;font-size:1.9rem;text-transform:uppercase;line-height:.9}
+.vote a{color:var(--black);font-weight:700}
+
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.head{display:flex;flex-direction:column;gap:.5rem;margin-bottom:2rem}
+.head h2{font-size:clamp(3rem,7.5vw,5.5rem)}
+.head p:not(.eyebrow){max-width:42rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:52rem){ .about{grid-template-columns:minmax(0,1fr)} }
+.prose{display:flex;flex-direction:column;gap:1.1rem;max-width:40rem}
+.events{background:var(--grape);color:var(--white);padding:1.6rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.events svg{width:7rem;color:var(--marigold)}
+.events h3{font-size:2.8rem}
+
+/* get involved */
+.band{background:var(--surface);border-block:3px solid var(--ink)}
+.ways{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));border-top:3px solid var(--ink)}
+.ways li{display:flex;border-bottom:1px solid var(--ink)}
+.ways a{display:flex;flex-direction:column;gap:.5rem;padding:1.4rem 1.4rem 1.4rem 0;color:var(--ink);text-decoration:none;min-width:0;width:100%}
+.ways h3{font-size:2.2rem}
+.ways p{font-size:.98rem}
+.ways .go{margin-top:auto;padding-top:.4rem;font-weight:700;color:var(--link)}
+.ways a:hover h3{color:var(--orange)}
+.ways a:hover .go{text-decoration:underline;text-underline-offset:4px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+@media (max-width:52rem){ .contact{grid-template-columns:minmax(0,1fr)} }
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.f{display:flex;flex-direction:column;gap:.35rem}
+.f.full{grid-column:1/-1}
+@media (max-width:30rem){ .f{grid-column:1/-1} }
+label{font-weight:700;font-size:.9rem}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:2px solid var(--ink);border-radius:0;padding:.7rem .8rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+.note{grid-column:1/-1;border-left:6px solid var(--marigold);background:var(--surface);padding:.8rem 1rem;font-size:.95rem}
+.note.err{border-color:var(--orange)}
+
+/* follow + footer */
+.follow{background:var(--grape);color:var(--white)}
+.follow .eyebrow{color:var(--marigold)}
+.follow a:not(.btn){color:var(--white)}
+footer{background:var(--black);color:var(--white)}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding-block:1.6rem;font-size:.92rem}
+footer .brand{font-size:1.4rem}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem 1.3rem}
+footer a{color:var(--white)}
+
+/* calendar page */
+.cal-hero{background:var(--orange);color:var(--black)}
+.cal-hero .wrap{padding-block:clamp(2rem,5vw,3.5rem);display:flex;flex-direction:column;gap:.8rem}
+.cal-hero .eyebrow{color:var(--black)}
+.cal-hero h1{font-size:clamp(3.4rem,10vw,7rem);line-height:.85;color:var(--white)}
+.cal-hero p:not(.eyebrow){max-width:40rem}
+.cal{padding-block:2rem clamp(3rem,7vw,5rem)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.8rem 1.5rem;margin-bottom:.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{font-family:var(--display);font-size:1.25rem;line-height:1;text-transform:uppercase;padding:.55rem .9rem .45rem;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.status{font-size:.9rem}
+.monthnav{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem}
+.month{font-size:clamp(2.6rem,7vw,4.2rem);min-width:6.2em;text-align:center}
+.chip:disabled{opacity:1;border-style:dashed;cursor:default;text-decoration:line-through}
+.rows{border-top:3px solid var(--ink);margin-top:.8rem}
+.tag.past{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.row.past .date{text-decoration:none}
+@media (max-width:30rem){ .month{min-width:0;flex-basis:100%;order:-1;text-align:left} }
+.rows{list-style:none;margin:0;padding:0}
+.row{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1.2rem;padding-block:1.3rem;border-bottom:1px solid var(--ink)}
+.date{display:flex;flex-direction:column;align-items:flex-start;font-family:var(--display);text-transform:uppercase;line-height:.85}
+.date b{font-weight:400;font-size:4rem;font-variant-numeric:tabular-nums}
+.date span{font-family:var(--sub);font-weight:300;font-size:1.5rem}
+.info{display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.tag{align-self:flex-start;font-family:var(--display);font-size:1rem;line-height:1;text-transform:uppercase;padding:.3rem .5rem .2rem;background:var(--grape);color:var(--white)}
+.tag.local{background:var(--marigold);color:var(--black)}
+.info h3{font-size:2rem;overflow-wrap:anywhere}
+.meta{display:flex;flex-wrap:wrap;gap:.1rem 1.2rem;font-size:.98rem}
+.acts{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-weight:700;font-size:.95rem;margin-top:.2rem}
+.desc{max-width:40rem;font-size:.98rem}
+.empty{padding-block:2rem;max-width:36rem}
+.share{background:var(--surface);border-block:3px solid var(--ink)}
+.share .wrap{padding-block:clamp(2rem,5vw,3.5rem);display:flex;flex-direction:column;gap:.8rem}
+.share h2{font-size:clamp(2.4rem,6vw,3.6rem)}
+.share p,.share ul{max-width:42rem;margin:0}
+@media (max-width:30rem){ .row{grid-template-columns:3.8rem minmax(0,1fr);gap:.8rem} .date b{font-size:2.9rem} .date span{font-size:1.2rem} }
+body{margin:0}
+[hidden]{display:none!important}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="m-abbr" viewBox="852.4 436.0 229.2 223.6"><path fill="currentColor" d="M 955.65 493.44 L 955.65 659.56 L 978.52 659.56 L 978.52 569.47 L 1005.94 569.47 L 1005.94 547.62 L 978.52 547.62 L 978.52 515.74 L 1008.10 515.74 L 1008.10 493.44 Z M 955.65 493.44 M 1044.09 546.67 L 1044.09 603.98 L 1020.99 603.98 L 1020.99 437.85 L 1063.73 437.85 C 1075.82 437.85 1081.64 446.78 1081.64 457.92 L 1081.64 526.83 C 1081.64 538.19 1074.74 546.67 1063.94 546.67 Z M 1055.09 524.82 C 1057.90 524.82 1058.77 522.81 1058.77 520.57 L 1058.77 464.17 C 1058.77 461.93 1057.90 459.92 1055.09 459.92 L 1044.09 459.92 L 1044.09 524.82 Z M 1055.09 524.82 M 923.45 437.85 L 919.84 555.58 L 918.18 555.58 L 910.71 437.85 L 889.99 437.85 L 883.10 555.58 L 881.45 555.58 L 877.04 437.85 L 852.43 437.85 L 866.89 603.98 L 892.58 603.98 L 899.38 494.04 L 900.45 494.04 L 906.82 603.98 L 932.94 603.98 L 948.06 437.85 Z M 923.45 437.85 M 1050.21 626.53 L 1036.75 617.96 L 1045.67 631.60 L 1029.83 635.19 L 1045.67 638.78 L 1036.75 652.42 L 1050.21 643.85 L 1053.42 659.56 L 1056.63 643.85 L 1070.10 652.42 L 1061.17 638.78 L 1077.01 635.19 L 1061.17 631.60 L 1070.10 617.96 L 1056.63 626.53 L 1053.42 610.83 Z M 1050.21 626.53 M 896.68 626.53 L 883.21 617.96 L 892.14 631.60 L 876.30 635.19 L 892.14 638.78 L 883.21 652.42 L 896.68 643.85 L 899.89 659.56 L 903.10 643.85 L 916.57 652.42 L 907.64 638.78 L 923.48 635.19 L 907.64 631.60 L 916.57 617.96 L 903.10 626.53 L 899.89 610.83 Z M 896.68 626.53 M 978.61 435.95 L 975.40 451.65 L 961.93 443.08 L 970.86 456.73 L 955.02 460.32 L 970.86 463.91 L 961.93 477.55 L 975.40 468.98 L 978.61 484.68 L 981.82 468.98 L 995.29 477.55 L 986.36 463.91 L 1002.19 460.32 L 986.36 456.73 L 995.29 443.08 L 981.82 451.65 Z M 978.61 435.95"/></symbol></svg>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><svg aria-hidden="true"><use href="#m-abbr"/></svg>San Diego</a>
+    <nav class="nav" aria-label="Main">
+      <a class="plain" href="index.html#about">About</a>
+      <a class="plain" href="index.html#get-involved">Get Involved</a>
+      <a class="plain" href="calendar.html" aria-current="page">Events</a>
+      <a class="plain" href="index.html#contact">Contact</a>
+      <a class="btn" href="https://caworkingfamilies.org/">Join the Party</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+  <div class="cal-hero"><div class="wrap">
+    <p class="eyebrow">California Working Families Party · San Diego</p>
+    <h1>Events Calendar</h1>
+    <p>WFP events across San Diego County, month by month. Most listings come from Mobilize, where you RSVP and pick a shift. Step back to see what the chapter has been doing.</p>
+  </div></div>
+
+  <div class="wrap cal">
+    <div class="bar">
+      <div class="monthnav" role="group" aria-label="Choose a month">
+        <button class="chip" id="m-prev" type="button" aria-label="Previous month">← Prev</button>
+        <h2 class="month" id="m-title" aria-live="polite"></h2>
+        <button class="chip" id="m-next" type="button" aria-label="Next month">Next →</button>
+      </div>
+      <button class="chip" id="m-today" type="button">This month</button>
+    </div>
+    <p class="status" id="status" role="status"></p>
+    <div id="list"></div>
+  </div>
+
+  <div class="share"><div class="wrap">
+    <p class="eyebrow">For partners and members</p>
+    <h2>Have an event to share?</h2>
+    <p>Send it to the regional team through the <a href="index.html#contact">contact form</a> with these details:</p>
+    <ul>
+      <li>Event name and host organization</li>
+      <li>Date, start time and end time</li>
+      <li>Location, or the link for a virtual event</li>
+      <li>A short description and the RSVP link</li>
+    </ul>
+  </div></div>
+</main>
+<footer>
+  <div class="wrap">
+    <p class="brand"><svg aria-hidden="true"><use href="#m-abbr"/></svg>San Diego</p>
+    <ul>
+      <li><a href="https://caworkingfamilies.org/">Instagram</a></li>
+      <li><a href="https://caworkingfamilies.org/">Facebook</a></li>
+      <li><a href="https://caworkingfamilies.org/">Bluesky</a></li>
+      <li><a href="https://workingfamilies.org/">National WFP</a></li>
+      <li><a href="https://caworkingfamilies.org/">CA WFP</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+// Mobilize connection. ORG is California Working Families Party on Mobilize (slug ca-wfp).
+// On load the page asks the Mobilize public API for this organization's events within RADIUS miles of ZIP,
+// from BACK months ago onward. If the request is blocked or fails, it shows the saved snapshot below.
+const ORG = 2566, ZIP = "92101", RADIUS = 50, BACK = 3, AHEAD = 3, TZ = "America/Los_Angeles";
+const SNAPSHOT_DATE = "October 6, 2026";
+const SNAPSHOT = [{"id":983574,"title":"Last Chance! Meet Our Member Rep Candidates (San Diego)","type":"COMMUNITY","virtual":false,"venue":"Market on 8th","city":"National City","zip":"91950","slots":[[1783270800,1783278000]],"url":"https://www.mobilize.us/ca-wfp/event/983574/"},{"id":999018,"title":"San Diego WFP Endorsement Screening Day","type":"MEET_GREET","virtual":false,"venue":"PANA main hall","city":"San Diego","zip":"92105","slots":[[1786816800,1786831200]],"url":"https://www.mobilize.us/ca-wfp/event/999018/"},{"id":1011100,"title":"Round 2 - San Diego WFP Endorsement Screening Day (Virtual Only)","type":"TOWN_HALL","virtual":true,"venue":"","city":"","zip":"92105","slots":[[1787014800,1787020200]],"url":"https://www.mobilize.us/ca-wfp/event/1011100/"},{"id":1011159,"title":"San Diego WFP Member Meetup August 2026","type":"MEETING","virtual":false,"venue":"Nate's Garden Grill","city":"San Diego","zip":"92105","slots":[[1787706000,1787713200]],"url":"https://www.mobilize.us/ca-wfp/event/1011159/"},{"id":1026938,"title":"Labor Day Solidarity BBQ - Roll Through with WFP San Diego","type":"SOLIDARITY_EVENT","virtual":false,"venue":"Rohr Park","city":"Bonita","zip":"91902","slots":[[1788719400,1788733800]],"url":"https://www.mobilize.us/ca-wfp/event/1026938/"},{"id":1021737,"title":"Road to November Day of Action for Nicole Crosby (District 2)","type":"CANVASS","virtual":false,"venue":"","city":"San Diego","zip":"92111","slots":[[1789228800,1789243200]],"url":"https://www.mobilize.us/ca-wfp/event/1021737/"},{"id":1036910,"title":"Road to November: Rally and Door Knock for Jose Rodriguez and Cindy Lopez ( National City)","type":"CANVASS","virtual":false,"venue":"","city":"National City","zip":"91950","slots":[[1789833600,1789844400]],"url":"https://www.mobilize.us/ca-wfp/event/1036910/"},{"id":1036962,"title":"Rally & Canvass Kickoff: Jose Lopez Eguino for Imperial Beach City Council, District 1","type":"COMMUNITY","virtual":false,"venue":"","city":"Imperial Beach","zip":"91932","slots":[[1789921800,1789932600]],"url":"https://www.mobilize.us/ca-wfp/event/1036962/"},{"id":1045252,"title":"Road to November: Oceanside Canvass for Kayla, Eric, and Emily!","type":"CANVASS","virtual":false,"venue":"Oceanside","city":"Oceanside","zip":"92057","slots":[[1790524800,1790535600]],"url":"https://www.mobilize.us/ca-wfp/event/1045252/"},{"id":1044275,"title":"Rally for Working Families","type":"COMMUNITY","virtual":false,"venue":"Oceanside Civic Center Plaza","city":"Oceanside","zip":"92054","slots":[[1790541000,1790550000]],"url":"https://www.mobilize.us/ca-wfp/event/1044275/"},{"id":1044185,"title":"Road to November: Rally + Canvass for Alexander Kraft and Liliana Soriano Garista","type":"CANVASS","virtual":false,"venue":"Renette park","city":"El Cajon","zip":"92020","slots":[[1791129600,1791140400]],"url":"https://www.mobilize.us/ca-wfp/event/1044185/"},{"id":1051994,"title":"An Evening with Jane Kim in Carlsbad","type":"FUNDRAISER","virtual":false,"venue":"Carlsbad, CA (RSVP on ActBlue for location)","city":"Carlsbad","zip":"92008","slots":[[1791673200,1791678600]],"url":"https://www.mobilize.us/ca-wfp/event/1051994/"}];
+
+// Events that are not on Mobilize. Add one object per event; they always show, alongside the Mobilize ones.
+//   date "YYYY-MM-DD" (Pacific). start/end "HH:MM" 24-hour, or leave both out when the time isn't set yet.
+//   label = the tag text, cta = the link text, url = where the link goes, desc = one or two sentences.
+const CUSTOM = [
+  {title:"The Big Bad Wolf Tour - San Diego", date:"2026-10-10", label:"Concert",
+   venue:"Soap Factory", city:"Barrio Logan, San Diego", mapQuery:"Soap Factory, Barrio Logan, San Diego, CA",
+   url:"https://secure.actblue.com/donate/bigbadwolfsandiego", cta:"Get tickets on ActBlue",
+   timeNote:"Time on the ticket page",
+   desc:"The Working Families Party and Future is Color take over the Soap Factory in Barrio Logan with local artists and local DJs. Tickets are pick-what-works-for-you and pay the artists, the venue and the sound. Nobody gets turned away over money."}
+];
+
+const TYPES = {CANVASS:"Canvass",PHONE_BANK:"Phone bank",TEXT_BANK:"Text bank",MEETING:"Meeting",COMMUNITY:"Community",
+  FUNDRAISER:"Fundraiser",MEET_GREET:"Meet and greet",HOUSE_PARTY:"House party",VOTER_REG:"Voter registration",TRAINING:"Training",
+  DEBATE_WATCH_PARTY:"Watch party",RALLY:"Rally",TOWN_HALL:"Town hall",OFFICE_OPENING:"Office opening",BARNSTORM:"Barnstorm",
+  SOLIDARITY_EVENT:"Solidarity event",COMMUNITY_CANVASS:"Community canvass",SIGNATURE_GATHERING:"Signature gathering",
+  WORKSHOP:"Workshop",LETTER_WRITING:"Letter writing",LITERATURE_DROP_OFF:"Lit drop",VISIBILITY_EVENT:"Visibility",
+  POSTCARD_WRITING:"Postcards",OTHER:"Event"};
+
+const fmt = (o, t) => new Intl.DateTimeFormat("en-US", Object.assign({timeZone:TZ}, o)).format(new Date(t * 1000));
+// A month is counted as year*12 + month, read in Pacific time.
+const monthOf = t => { const p = new Intl.DateTimeFormat("en-US", {timeZone:TZ, year:"numeric", month:"numeric"}).formatToParts(new Date(t * 1000));
+  return +p.find(x => x.type === "year").value * 12 + (+p.find(x => x.type === "month").value - 1); };
+const monthName = m => new Intl.DateTimeFormat("en-US", {month:"long", year:"numeric", timeZone:"UTC"}).format(new Date(Date.UTC(Math.floor(m / 12), m % 12, 15)));
+const nowS = () => Date.now() / 1000;
+const THIS = monthOf(nowS()), FIRST = THIS - BACK;
+const sinceUnix = Math.floor(Date.UTC(Math.floor(FIRST / 12), FIRST % 12, 1) / 1000);
+
+function fromApi(e){
+  const l = e.location || {};
+  return {id:e.id, title:e.title, type:e.event_type, virtual:!!e.is_virtual, url:e.browser_url,
+    venue:l.venue || "", city:l.locality || "", zip:l.postal_code || "",
+    slots:(e.timeslots || []).map(t => [t.start_date, t.end_date])};
+}
+async function fetchLive(){
+  const r = await fetch("https://api.mobilize.us/v1/organizations/" + ORG + "/events?per_page=100&zipcode=" + ZIP + "&max_dist=" + RADIUS + "&timeslot_start=gte_" + sinceUnix);
+  if(!r.ok) throw new Error(r.status);
+  return ((await r.json()).data || []).map(fromApi);
+}
+
+// Pacific wall-clock time -> unix seconds.
+function laUnix(date, time){
+  const guess = Date.parse(date + "T" + time + ":00Z");
+  const shown = new Date(guess).toLocaleString("sv-SE", {timeZone:TZ}).replace(" ", "T") + "Z";
+  return (guess - (Date.parse(shown) - guess)) / 1000;
+}
+const custom = CUSTOM.map((c, i) => {
+  const allDay = !c.start, s = laUnix(c.date, c.start || "12:00"), f = allDay ? laUnix(c.date, "23:59") : laUnix(c.date, c.end || c.start);
+  return Object.assign({id:"custom-" + i, custom:true, allDay, virtual:false, slots:[[s, f]]}, c);
+});
+const gstamp = t => new Date(t * 1000).toISOString().replace(/[-:]|\.\d{3}/g, "");
+const el = (tag, cls, text) => { const n = document.createElement(tag); if(cls) n.className = cls; if(text != null) n.textContent = text; return n; };
+const link = (text, href) => { const a = el("a", "", text); a.href = href; a.target = "_blank"; a.rel = "noopener"; return a; };
+
+let events = SNAPSHOT.concat(custom), shown = THIS, last = THIS + AHEAD;
+function render(){
+  const now = nowS(), all = [];
+  for(const e of events) for(const [s, f] of e.slots) if(monthOf(s) >= FIRST) all.push({e, s, f, m:monthOf(s)});
+  last = Math.max(THIS + AHEAD, ...all.map(r => r.m));
+  shown = Math.min(Math.max(shown, FIRST), last);
+  const rows = all.filter(r => r.m === shown).sort((a, b) => a.s - b.s);
+  document.getElementById("m-title").textContent = monthName(shown);
+  document.getElementById("m-prev").disabled = shown <= FIRST;
+  document.getElementById("m-next").disabled = shown >= last;
+  document.getElementById("m-today").hidden = shown === THIS;
+  const list = document.getElementById("list"); list.textContent = "";
+  if(!rows.length){
+    const p = el("p", "empty", (shown < THIS ? "No San Diego events were listed on Mobilize for " : "No San Diego events are listed on Mobilize yet for ") + monthName(shown) + ". See everything on ");
+    p.append(link("the CA WFP Mobilize page", "https://www.mobilize.us/ca-wfp/"), ".");
+    list.append(p); return;
+  }
+  const ul = el("ul", "rows"); list.append(ul);
+  for(const r of rows){
+    const past = r.f <= now;
+    const li = el("li", "row" + (past ? " past" : "")), date = el("div", "date"), info = el("div", "info");
+    date.append(el("b", "", fmt({day:"numeric"}, r.s)), el("span", "", fmt({weekday:"short"}, r.s)));
+    const place = r.e.virtual ? "Virtual" : [r.e.venue, r.e.city].filter((v, i, a) => v && !(i === 1 && a[0].includes(v))).join(", ");
+    info.append(el("span", "tag" + (past ? " past" : " local"), (past ? "Past event \u00b7 " : "") + (r.e.label || TYPES[r.e.type] || "Event")));
+    info.append(el("h3", "", r.e.title));
+    const meta = el("div", "meta");
+    meta.append(el("span", "", fmt({weekday:"long", month:"long", day:"numeric"}, r.s)),
+      el("span", "", r.e.allDay ? (r.e.timeNote || "Time to be announced") : fmt({hour:"numeric", minute:"2-digit"}, r.s) + " to " + fmt({hour:"numeric", minute:"2-digit", timeZoneName:"short"}, r.f)));
+    if(r.e.mapQuery) meta.append(link(place, "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(r.e.mapQuery)));
+    else if(!r.e.virtual && r.e.zip) meta.append(link(place, "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((r.e.venue && !/rsvp/i.test(r.e.venue) ? r.e.venue + ", " : "") + r.e.city + " CA " + r.e.zip)));
+    else meta.append(el("span", "", place));
+    if(r.e.desc) info.append(el("p", "desc", r.e.desc));
+    const acts = el("div", "acts"), day = r.e.date ? r.e.date.replace(/-/g, "") : "";
+    if(r.e.custom && past) acts.append(link("Event page \u2192", r.e.url));
+    else if(r.e.custom) acts.append(link((r.e.cta || "Details") + " \u2192", r.e.url),
+      link("Add to Google Calendar", "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(r.e.title)
+        + "&dates=" + (r.e.allDay ? day + "/" + gstamp(laUnix(r.e.date, "12:00") + 86400).slice(0, 8) : gstamp(r.s) + "/" + gstamp(r.f))
+        + "&details=" + encodeURIComponent(r.e.url) + "&location=" + encodeURIComponent(place)));
+    else if(past) acts.append(link("View on Mobilize \u2192", r.e.url));
+    else acts.append(link("RSVP on Mobilize \u2192", r.e.url),
+      link("Add to Google Calendar", "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(r.e.title)
+        + "&dates=" + gstamp(r.s) + "/" + gstamp(r.f) + "&details=" + encodeURIComponent("RSVP: " + r.e.url) + "&location=" + encodeURIComponent(place)));
+    info.append(meta, acts); li.append(date, info); ul.append(li);
+  }
+}
+document.getElementById("m-prev").addEventListener("click", () => { shown--; render(); });
+document.getElementById("m-next").addEventListener("click", () => { shown++; render(); });
+document.getElementById("m-today").addEventListener("click", () => { shown = THIS; render(); });
+const status = document.getElementById("status");
+status.textContent = "Showing events saved from Mobilize on " + SNAPSHOT_DATE + ".";
+render();
+fetchLive().then(live => { events = live.concat(custom); status.textContent = "Live from Mobilize."; render(); }).catch(() => {});
+</script>
+</body></html>
